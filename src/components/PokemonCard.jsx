@@ -19,10 +19,10 @@ function PokemonCard() {
   );
 
   return (
-    <div>
-      <h2>{pokemon.name}</h2>
-      {image}
-    </div>
+    <figure>
+        {image}
+        <figcaption>{pokemon.name}</figcaption>
+    </figure>
   );
 }
 
