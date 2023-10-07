@@ -1,17 +1,5 @@
-const pokemonList = [
-  {
-    name: "bulbasaur",
-    imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-  },
-  {
-    name: "mew",
-  },
-];
-
-function PokemonCard() {
-  const pokemon = pokemonList[1];
-
+import PropTypes from "prop-types";
+function PokemonCard({ pokemon }) {
   const image = pokemon.imgSrc ? (
     <img src={pokemon.imgSrc} alt={pokemon.name} />
   ) : (
@@ -20,10 +8,17 @@ function PokemonCard() {
 
   return (
     <figure>
-        {image}
-        <figcaption>{pokemon.name}</figcaption>
+      {image}
+      <figcaption>{pokemon.name}</figcaption>
     </figure>
   );
 }
+
+PokemonCard.propTypes = {
+    pokemon: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    imgSrc: PropTypes.string,
+  }).isRequired,
+};
 
 export default PokemonCard;
