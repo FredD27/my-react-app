@@ -1,4 +1,4 @@
-
+import React from "react";
 
 function PokemonCard() {
     return (
@@ -7,6 +7,6 @@ function PokemonCard() {
         <figcaption>Bulbasaur</figcaption>
     </figure>
     );
-}
+};
 
 export default PokemonCard;
