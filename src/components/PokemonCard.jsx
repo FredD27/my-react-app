@@ -1,17 +1,19 @@
 
-function PokemonCard({pokemon}) {
-  const image = pokemon.imgSrc ? (
-    <img src={pokemon.imgSrc} alt={pokemon.name} />
-  ) : (
-    <p>???</p>
-  );
+function PokemonCard ({pokemon}) {
+console.log(pokemon);
 
   return (
-    <figure>
-      {image}
-      <figcaption>{pokemon.name}</figcaption>
-    </figure>
+    <div>
+      <figure>
+        <figcaption>{pokemon.name}</figcaption>
+        {pokemon.imgSrc ? 
+          <img src={pokemon.imgSrc} alt="photo de Bulbasaur" />
+         : 
+          <p>???</p>
+        }
+      </figure>
+    </div>
   );
-}
+};
 
 export default PokemonCard;

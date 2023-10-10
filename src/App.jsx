@@ -14,10 +14,9 @@ const pokemonList = [
 ];
 
 function App() {
-  let pokemon = pokemonList[0];
   return (
     <div>
-      <PokemonCard pokemon={pokemon}/>
+      <PokemonCard pokemon={pokemonList[0]}/>
     </div>
   );
 }
